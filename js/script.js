@@ -1,7 +1,7 @@
 let altura = parseInt(prompt("Cuanto Mides?(Centímetros)"));
 let peso = parseInt(prompt("Cuanto pesas? (Kilogramos)"));
 
-altura = altura/100
+altura = altura/100;
 
 let imc = (peso/Math.pow(altura,2));
 
