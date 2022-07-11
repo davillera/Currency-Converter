@@ -4,7 +4,7 @@ function calcular(){
     altura = altura/100
     let imc = peso/Math.pow(altura,2)
     imc = imc.toFixed(1)
-    let resultado = ""
+    let resultado
     if (imc < 18){
         resultado = ("A comer más Mi rey xd")
     }
