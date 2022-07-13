@@ -19,9 +19,22 @@
 //     document.getElementById("resultado").innerHTML = "Tu IMC es de "+imc+", "+ resultado
 // }
 
-let num = parseInt(prompt("Número de repeticiones"));
-num = num + 1
+//Ciclo For Desafio Complementario
+        // let num = parseInt(prompt("Número de repeticiones"));
+        // num = num + 1
 
-for( var i = 1; i < num; i++){
-    console.log("hello "+ i);
-}
+        // for( let i = 1; i < num; i++){
+        //     console.log("hello "+ i);
+        // }
+
+//Simulador de pagos de cuotas de credito
+let monto = parseFloat(prompt("Indica la cantidad del crédito"));
+let numCuotas = parseInt(prompt("Indica el número de cuotas"));
+let tem = parseFloat(prompt("Indica el porcentaje de interés Mensual (En porcentaje)"));
+tem = tem/100
+
+let precioCuotas = (monto * (tem * (Math.pow((1+tem),numCuotas))))/(Math.pow((1+tem),numCuotas)-1)
+precioCuotas = precioCuotas.toFixed(0)
+let montototal = precioCuotas * numCuotas
+
+alert("Tendrás "+numCuotas+" cuotas de "+precioCuotas+"$ cada una, con un monto total de " + montototal + "$")
