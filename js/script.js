@@ -37,4 +37,4 @@ let precioCuotas = (monto * (tem * (Math.pow((1+tem),numCuotas))))/(Math.pow((1+
 precioCuotas = precioCuotas.toFixed(0)
 let montototal = precioCuotas * numCuotas
 
-alert("Tendrás "+numCuotas+" cuotas de "+precioCuotas+"$ cada una, con un monto total de " + montototal + "$")
+alert("Tendrás "+numCuotas+" cuotas de "+precioCuotas+"$ cada una, con una deuda total de " + montototal + "$")
