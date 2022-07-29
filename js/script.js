@@ -1,64 +1,68 @@
-//Función de calcular IMC
+//divisas a COP
+const USD = 4372;
+const EUR = 4453;
+const CAD = 3410;
+const ARS = 33
 
-// function calcular(){
-//     let altura = document.getElementById("altura").value
-//     let peso = document.getElementById("peso").value
-//     altura = altura/100
-//     let imc = peso/Math.pow(altura,2)
-//     imc = imc.toFixed(1)
-//     let resultado
-//     if (imc < 18){
-//         resultado = ("A comer más Mi rey xd")
-//     }
-//     else if (imc > 18 && imc < 25){
-//         resultado = ("Estás bien rey, sigue así xd")
-//     }
-//     else if( imc > 25){
-//         resultado = ("Hey loco que pasa Valemia, deja de comer y ponte a hacer ejercicio")
-//     }
-//     document.getElementById("resultado").innerHTML = "Tu IMC es de "+imc+", "+ resultado
-// }
+let cash;
+let resultado;
 
-//Ciclo For Desafio Complementario
-// let num = parseInt(prompt("Número de repeticiones"));
-// num = num + 1
+const divisas = ["USD", "EUR", "CAD", "ARS"]
 
-// for( let i = 1; i < num; i++){
-//     console.log("hello "+ i);
-// }
-
-
-//Simulador de pagos de cuotas de credito
-
-function calcular(monto, tem, numCuotas){
-    return (monto * (tem * (Math.pow((1+tem),numCuotas))))/(Math.pow((1+tem),numCuotas)-1)
+let objUSD={
+    nombre: "Dólar",
+    precio: USD,
+}
+let objEUR={
+    nombre: "Euro",
+    precio: EUR,
+}
+let objCAD={
+    nombre: "Dólar Candiense",
+    precio: CAD,
+}
+let objARS={
+    nombre: "Peso Argentino",
+    precio: ARS,
 }
 
-let monto = parseInt(prompt("Indica la cantidad del crédito"))
-while(isNaN(monto)){
-    alert("Escribe una cantidad válida")
-    monto = parseInt(prompt("Indica la cantidad del crédito"));
-}
-let numCuotas = parseInt(prompt("Indica el número de cuotas"));
-while(isNaN(numCuotas)){
-    alert("Escribe una cantidad válida")
-    numCuotas = parseInt(prompt("Indica el número de cuotas"));
+let frmoney = parseInt(prompt("A qué divisa vas a convertir? (0 -> USD, 1 -> EUR, 2 -> CAD, 3 -> ARS)")) 
+while(isNaN(frmoney)){
+    alert("ingresa un número Válido")
+    frmoney = parseInt(prompt("A qué divisa vas a convertir? (0 -> USD, 1 -> EUR, 2 -> CAD, 3 -> ARS)"))
 }
 
-let tem = parseFloat(prompt("Indica el porcentaje de interés Mensual (En porcentaje)"));
-while(true){
-    if (isNaN(tem)){
-        alert("Escribe una cantidad válida")
-        tem = parseFloat(prompt("Indica el porcentaje de interés Mensual (En porcentaje)"))
-    }else{
-        break
-    }
-    
+if (frmoney == 0 ){
+    cash = parseFloat(prompt("Cuánto vas a convertir?"))
+}else if (frmoney == 1){
+    cash = parseFloat(prompt("Cuánto vas a convertir?"))
+    calculoEUR();
+}else if(frmoney == 2){
+    cash = parseFloat(prompt("Cuánto vas a convertir?"))
+    calculoCAD();
+}else if(frmoney == 3){
+    cash = parseFloat(prompt("Cuánto vas a convertir"))
+    calculoARS();
 }
-tem = tem/100
+console.log(cash);
+console.log(frmoney);
+console.log(resultado);
 
-let precioCuotas = calcular(monto, tem, numCuotas).toFixed(1)
+function calculoUSD(cash, USD){
+    resultado = cash/USD + " Dólares";
+    return 
+}
+function calculoEUR(cash, EUR){
+    resultado = cash/EUR + " Euros";
+    return
+}
+function calculoCAD(cash, CAD){
+    resultado = cash/CAD + " Dólares Candienses";
+    return
+}
+function calculoARS(cash, ARS){
+    resultado = cash/ARS + " Pesos Argentinos" ;
+    return
+}
 
-let montototal = precioCuotas * numCuotas
-
-alert("Tendrás "+numCuotas+" cuotas de "+precioCuotas+"$ cada una, con una deuda total de " + montototal + "$")
+alert(cash + "$ COP, son "+ resultado);
