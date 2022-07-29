@@ -1,29 +1,25 @@
-//divisas a COP
-const USD = 4372;
-const EUR = 4453;
-const CAD = 3410;
-const ARS = 33
-
 let cash;
 let resultado;
 
-const divisas = ["USD", "EUR", "CAD", "ARS"]
-
-let objUSD={
+const objUSD={
     nombre: "Dólar",
-    precio: USD,
+    abreviacion: "USD",
+    precio: 4372,
 }
-let objEUR={
+const objEUR={
     nombre: "Euro",
-    precio: EUR,
+    abreviacion: "EUR",
+    precio: 4453,
 }
-let objCAD={
+const objCAD={
     nombre: "Dólar Candiense",
-    precio: CAD,
+    abreviacion: "CAD",
+    precio: 3410,
 }
-let objARS={
+const objARS={
     nombre: "Peso Argentino",
-    precio: ARS,
+    abreviacion: "ARS",
+    precio: 33,
 }
 
 let frmoney = parseInt(prompt("A qué divisa vas a convertir? (0 -> USD, 1 -> EUR, 2 -> CAD, 3 -> ARS)")) 
@@ -34,35 +30,32 @@ while(isNaN(frmoney)){
 
 if (frmoney == 0 ){
     cash = parseFloat(prompt("Cuánto vas a convertir?"))
+    alert(cash + "$ COP, son "+ calculoUSD(cash, objUSD.precio));
 }else if (frmoney == 1){
     cash = parseFloat(prompt("Cuánto vas a convertir?"))
-    calculoEUR();
+    alert(cash + "$ COP, son "+ calculoEUR(cash, objEUR.precio))
 }else if(frmoney == 2){
     cash = parseFloat(prompt("Cuánto vas a convertir?"))
-    calculoCAD();
+    alert(cash + "$ COP, son "+ calculoCAD(cash, objCAD.precio))
 }else if(frmoney == 3){
     cash = parseFloat(prompt("Cuánto vas a convertir"))
-    calculoARS();
+    alert(cash + "$ COP, son "+ calculoARS(cash, objARS.precio))
 }
 console.log(cash);
 console.log(frmoney);
 console.log(resultado);
 
 function calculoUSD(cash, USD){
-    resultado = cash/USD + " Dólares";
-    return 
+    return (cash/USD).toFixed(2) + " Dólares Americanos";
 }
 function calculoEUR(cash, EUR){
-    resultado = cash/EUR + " Euros";
-    return
+    return (cash/EUR).toFixed(2) + " Euros";
 }
 function calculoCAD(cash, CAD){
-    resultado = cash/CAD + " Dólares Candienses";
-    return
+    return (cash/CAD).toFixed(2) + " Dólares Candienses";
 }
 function calculoARS(cash, ARS){
-    resultado = cash/ARS + " Pesos Argentinos" ;
-    return
+    return (cash/ARS).toFixed(2) + " Pesos Argentinos" ;
 }
 
 alert(cash + "$ COP, son "+ resultado);
