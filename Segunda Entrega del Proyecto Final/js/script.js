@@ -27,7 +27,6 @@ const objString = JSON.stringify(objJSON)
 
 console.log(objJSON);
 
-
 function checkeo(){
     let importe = parseFloat(document.getElementById("importe").value)
     let divisaDestino = document.getElementById("divisaDestino")
