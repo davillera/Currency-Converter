@@ -13,8 +13,14 @@
 }
 h1{
     padding-bottom: 30px;
+    color: #010326;
+}
+p{
+    color: #D5DAF2;
+    padding-left: 5px;
 }
 body{
+    background-color: #010326;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,10 +29,54 @@ body{
 div{
     padding-bottom: 10px;
 }
+main{
+    padding: 50px;
+    background-color: #D5DAF2;
+    border-radius: 50px;
+}
+select{
+    border-color: #010326;
+    border-width: 2px;
+    height: 35px;
+    border-radius: 10px;
+    width: 70px;
+}
+.fa-copyright{
+    color: #D5DAF2;
+    animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+.currency-icon{
+    display: flex;
+    justify-content: center;
+}
+.monto{
+    padding-bottom: 25px;
+}
+.fas{
+    size: 0%;
+}
+.banderas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bandera{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
 .options{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .btnCambio{
     display: flex;
@@ -36,17 +86,42 @@ div{
     height: 30px;
     display: flex;
     justify-content: center;
+    border-radius: 50%;
+    color: #D5DAF2;
+    border-color: #010326;
+    background-color: #010326;
 }
 
 .btnCalcular{
     display: flex;
     justify-content: center;
 }
+#btnCalcular{
+    background-color: #010326;
+    font-weight: bold;
+    color: #D5DAF2;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+a{
+    text-decoration: none;
+}
 
 #importe{
-    height: 45px;
+    height: 40px;
     width: 100%;
     font-size: 17px;
     padding: 0 15px;
     border: 1px solid black;
+    border-radius: 12px;
+    border-width: 2px
+}
+footer{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 30px;
 }
