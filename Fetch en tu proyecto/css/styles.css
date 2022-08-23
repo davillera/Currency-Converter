@@ -1,4 +1,36 @@
-body, div{
-  align-items: center;
-  justify-content: center;
+@font-face {
+    font-family:"product-sans";
+    src: url("/Fuentes/google-sans/ProductSans-Black.woff");
+    src: url("/Fuentes/google-sans/ProductSans-Bold.woff");
+    src: url("/Fuentes/google-sans/ProductSans-Medium.woff");
+    src: url("/Fuentes/google-sans/ProductSans-Regular.woff");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "product-sans"
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+div{
+    padding-bottom: 10px;
+}
+.options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btnCambio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
 }
