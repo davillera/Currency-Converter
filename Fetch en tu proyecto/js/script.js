@@ -43,7 +43,7 @@ function calcular(){
     .then(response => response.json())
     .then((data) =>{
         let total = data.result
-        document.getElementById("resultado").innerHTML = `${from.value} son ${total} ${to.value} `
+        document.getElementById("resultado").innerHTML = `${importe.value} ${from.value} son ${total} ${to.value} `
     })
 
     .catch(error => console.log('error', error))

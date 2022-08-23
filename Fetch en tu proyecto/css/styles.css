@@ -11,6 +11,9 @@
     box-sizing: border-box;
     font-family: "product-sans"
 }
+h1{
+    padding-bottom: 30px;
+}
 body{
     display: flex;
     align-items: center;
@@ -33,4 +36,17 @@ div{
     height: 30px;
     display: flex;
     justify-content: center;
+}
+
+.btnCalcular{
+    display: flex;
+    justify-content: center;
+}
+
+#importe{
+    height: 45px;
+    width: 100%;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid black;
 }
