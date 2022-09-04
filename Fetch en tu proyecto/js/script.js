@@ -17,15 +17,10 @@ btnCambio.addEventListener("click", () =>{
     cambioBandera()
 })
 
-
-
-
 function cambioBandera(){
     document.getElementById("bandera0").src = `../banderas/${from.value}.png`
     document.getElementById("bandera1").src = `../banderas/${to.value}.png`
 }
-
-
 
 function calcular(){
     let myHeaders = new Headers();
