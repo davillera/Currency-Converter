@@ -34,9 +34,7 @@ p{
     align-items: center;
     justify-content: center;
     background-color: #D5DAF2;
-    border-radius: 50px;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
+    border-radius: 20px 0 0 20px;
     max-width: 400px;
     max-height: 475px;
     overflow-y: scroll;
@@ -118,10 +116,12 @@ select{
     padding-bottom: 20px;
 }
 .containerLimpiar::-webkit-scrollbar-track {
-    background:#D5DAF2;        /* color of the tracking area */
+    background:#D5DAF2;  
+    border-radius: 20px;      /* color of the tracking area */
         }
 .containerLimpiar::-webkit-scrollbar {
-        width: 12px;               /* width of the entire scrollbar */
+        width: 12px;
+                  /* width of the entire scrollbar */
         }
 .containerLimpiar::-webkit-scrollbar-thumb {
         background-color: #D5DAF2;    /* color of the scroll thumb */
@@ -145,6 +145,7 @@ select{
     display: flex;
     justify-content: center;
     border-radius: 50%;
+    
     color: #D5DAF2;
     border-color: #010326;
     background-color: #010326;
@@ -183,4 +184,15 @@ footer{
     bottom: 0;
     right: 0;
     padding: 30px;
+}
+
+@media (max-width: 768px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .main{
+        width: calc(100vw - 2em);
+    }
 }
